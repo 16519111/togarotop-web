@@ -1,8 +1,10 @@
 import Login from './pages/login';
+import Dashboard from './pages/dashboard';
 import Menu from './pages/menu';
 import Create from './pages/create';
 import Find from './pages/find';
 import Navbar from './components/navbar';
+import { COLORS } from './consts/colors';
 import './App.css';
 
 import {
@@ -13,6 +15,13 @@ import {
 } from "react-router-dom";
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: 
+      <>
+        <Dashboard/>
+      </>,
+  },
   {
     path: "/login",
     element: <Login/>,
