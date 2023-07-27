@@ -1,9 +1,11 @@
 import Login from './pages/login';
 import Dashboard from './pages/dashboard';
+import About from './pages/about';
 import Menu from './pages/menu';
 import Create from './pages/create';
 import Find from './pages/find';
 import Navbar from './components/navbar';
+import Products from './pages/products';
 import { COLORS } from './consts/colors';
 import './App.css';
 
@@ -20,6 +22,20 @@ const router = createBrowserRouter([
     element: 
       <>
         <Dashboard/>
+      </>,
+  },
+  {
+    path: "/about",
+    element: 
+      <>
+        <About/>
+      </>,
+  },
+  {
+    path: "/products",
+    element: 
+      <>
+        <Products/>
       </>,
   },
   {

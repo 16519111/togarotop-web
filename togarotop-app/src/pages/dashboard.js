@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { FaDesktop, FaLaptop, FaMouse, FaPlus, FaPen, FaLock } from "react-icons/fa";
+import { FaDesktop, FaLaptop, FaMouse, FaPlus, FaPen, FaLock, FaWhatsapp } from "react-icons/fa";
 import { COLORS } from "../consts/colors";
 import coffee from "../assets/coffee.jpg";
 import togatoLogo from "../assets/togato-logo.png";
 import allCoffee from "../assets/all-coffee.jpeg";
 import aribacaBubuk from "../assets/arabica-bubuk.webp";
 import backgroundCoffee from "../assets/background-coffee.png";
+import heroImage from "../assets/new/hero.jpeg";
+import logoWhite from "../assets/new/Logo_White.jpg";
+import dashboardTwo from "../assets/new/dashboard-2.jpeg";
 
 export default function Dashboard() {
 
@@ -16,19 +19,19 @@ export default function Dashboard() {
           style={{
             
             // backgroundImage: `url(${backgroundCoffee})`,
-            backgroundSize: "cover"
+            
           }}
         >
           <nav 
             class="border-gray-200" 
-            // style={{ backgroundColor: COLORS.main }}
+            style={{ backgroundColor: "#0c0a0b" }}
           >
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
               <a href="https://flowbite.com/" class="flex items-center">
                 <img src={togatoLogo} class="h-8 mr-3" alt="Flowbite Logo" />
                 <span 
                   class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-                  style={{ color: COLORS.main }}
+                  style={{ color: "white" }}
                 >
                   Togato Coffee
                 </span>
@@ -40,7 +43,7 @@ export default function Dashboard() {
               <div 
                 class="hidden w-full md:block md:w-auto" 
                 id="navbar-default"
-                style={{ color: COLORS.main }}
+                style={{ color: "white" }}
               >
                 <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-12 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                   <li>
@@ -93,190 +96,110 @@ export default function Dashboard() {
             </div>
           </nav>
           <div 
-            class="mx-28 flex items-center justify-between"
+            class="flex items-center"
             style={{
-              height: "calc(100vh - 364px)"
+              height: "calc(100vh - 64px)",
+              
             }}
           >
-            <div class="mt-48 flex">
+            <img 
+              src={heroImage}
+              style={{
+                height: "calc(100vh - 64px)"
+              }}
+            />
+            <div>
+              <img src={logoWhite} />
+              <p 
+                class="text-center text-2xl font-bold"
+                style={{ color: COLORS.main }}
+              >
+                KOPI SIBORONGBORONG<br/>SUMATERA UTARA<br/>SINCE 2019
+              </p>
+            </div>
+            <img 
+              src={heroImage} 
+              style={{
+                height: "calc(100vh - 64px)"
+              }}
+            />
+            {/* <div class="mt-48 flex justify-between">
               <div 
-                class="max-w-xl p-12 rounded-l-xl text-center  justify-end"
+                class="max-w-xl p-12 rounded-l-xl text-center justify-end"
                 style={{
                   
                 }}
               >
-                <p 
-                  class="font-bold text-3xl"
-                  style={{
-                    color: COLORS.darkMain
-                  }}
-                >
-                  Kopi <span class="font-black" style={{ color: COLORS.main }}>Terbaik</span> di Indonesia
-                </p>
                 <hr 
-                  class="my-4 mx-36 rounded border-0"
+                  class="my-4 mx-48 rounded border-0"
                   style={{
                     border: 0,
-                    borderTop: `3px solid ${COLORS.main}`
+                    borderTop: `3px dotted ${COLORS.main}`
                   }}
                 />
-                <p class="px- text-lg" style={{ color: COLORS.dark }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <p 
+                  class="font-bold text-2xl"
+                  style={{
+                    color: COLORS.darkMain,
+                    lineHeight: "3rem"
+                  }}
+                >
+                  Sumatera's<br /> <span class="font-black text-5xl" style={{ color: COLORS.main }}>SIBORONGBORONG</span><br /> <i class="text-4xl">Drip Coffee ~</i>
                 </p>
+                <hr 
+                  class="my-4 mx-48 rounded border-0"
+                  style={{
+                    border: 0,
+                    borderTop: `3px dotted ${COLORS.main}`
+                  }}
+                />
+                <div class="mt-6 flex justify-center">
+                  <button 
+                    class="text-white text-lg font-bold py-2 px-4 rounded mr-1"
+                    style={{
+                      border: `1px solid ${COLORS.main}`,
+                      color: COLORS.main,
+                      "&:hover": {
+                        backgroundColor: COLORS.darkMain
+                      }
+                    }}
+                  >
+                    Selengkapnya
+                  </button>
+                  <button 
+                    class="text-white text-lg font-bold py-2 px-4 rounded ml-1 flex items-center"
+                    style={{
+                      backgroundColor: COLORS.main,
+                      "&:hover": {
+                        backgroundColor: COLORS.darkMain
+                      }
+                    }}
+                  >
+                    <FaWhatsapp />
+                    <p class="ml-1.5">0852-0659-6663</p>
+                  </button>
+                </div>
+                // 
               </div>
               <img src={allCoffee} 
                 style={{
                   width: "600px"
                 }} 
               />
-            </div>
+            </div> */}
           </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path fill="#063c14" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-        <div 
+        </svg> */}
+        {/* <div 
           class="h-screen flex justify-center items-center"
           style={{
-            backgroundColor: COLORS.darkMain
+            
           }}
         >
-            <div 
-              class="max-w-xl p-12 rounded-xl text-center  justify-end"
-              style={{
-                // backgroundColor: COLORS.darkMain,
-                color: COLORS.lightBrown
-              }}
-            >
-              <p class="font-black text-3xl">COBA PRODUK KAMI !</p>
-              {/* <hr 
-                class="my-2"
-                style={{
-                  border: 0,
-                  borderTop: `1px solid ${COLORS.lightBrown}`
-                }}
-              />
-              <p class="px- text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p> */}
-            </div>
-        </div>
-        <div
-          style={{
-            backgroundColor: COLORS.darkMain
-          }}
-        >
-          <hr 
-            class="mx-16"
-            style={{
-              border: 0,
-              borderTop: `1px solid ${COLORS.lightBrown}`,
-              backgroundColor: COLORS.darkMain
-            }}
-          />
-        </div>
-        <div 
-          class="flex items-center justify-between h-screen"
-          style={{
-            backgroundColor: COLORS.darkMain
-          }}
-        >
-          <div 
-            class="max-w-xl p-12 rounded-l-xl text-center  justify-end ml-40"
-            style={{
-              
-            }}
-          >
-            <p 
-              class="font-bold text-2xl"
-              style={{
-                color: COLORS.lightBrown
-              }}
-            >
-              Arabica Bubuk
-            </p>
-            <hr 
-              class="my-2 mx-48"
-              style={{
-                border: 0,
-                borderTop: `1px solid ${COLORS.lightBrown}`
-              }}
-            />
-            <p class="px- text-lg" style={{ color: COLORS.brown }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-          <img src={aribacaBubuk}
-            class="mr-40 rounded-full"
-            style={{
-              width: "400px"
-            }} 
-          />
-        </div>
-        <div
-          style={{
-            backgroundColor: COLORS.darkMain
-          }}
-        >
-          <hr 
-            class="mx-16"
-            style={{
-              border: 0,
-              borderTop: `1px solid ${COLORS.lightBrown}`,
-              backgroundColor: COLORS.darkMain
-            }}
-          />
-        </div>
-        <div 
-          class="flex items-center justify-between h-screen"
-          style={{
-            backgroundColor: COLORS.darkMain
-          }}
-        >
-          <img src={aribacaBubuk}
-            class="ml-40 rounded-full"
-            style={{
-              width: "400px"
-            }} 
-          />
-          <div 
-            class="max-w-xl p-12 rounded-l-xl text-center  justify-end mr-40"
-            style={{
-              
-            }}
-          >
-            <p 
-              class="font-bold text-2xl"
-              style={{
-                color: COLORS.lightBrown
-              }}
-            >
-              Arabica Bubuk
-            </p>
-            <hr 
-              class="my-2 mx-48"
-              style={{
-                border: 0,
-                borderTop: `1px solid ${COLORS.lightBrown}`
-              }}
-            />
-            <p class="px- text-lg" style={{ color: COLORS.brown }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-        </div>
+          <img src={dashboardTwo} />
+        </div> */}
       </>
     );
   }
