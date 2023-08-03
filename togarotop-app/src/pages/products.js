@@ -23,7 +23,8 @@ export default function Products() {
         region: "Siborongborong",
         process: "Semi Wash",
         altitude: "1200 - 1400 MDPL",
-        roasting: "Medium - Dark"
+        roasting: "Medium - Dark",
+        image: ProductOne
       },
       {
         nama: "ROBUSTA GROUND COFFEE",
@@ -33,7 +34,8 @@ export default function Products() {
         region: "Siborongborong",
         process: "Semi Wash",
         altitude: "1200 - 1400 MDPL",
-        roasting: "Medium - Dark"
+        roasting: "Medium - Dark",
+        image: ProductTwo
       },
       {
         nama: "ARABICA SINGLE ORIGIN 200GR",
@@ -43,7 +45,8 @@ export default function Products() {
         region: "Siborongborong",
         process: "Semi Wash",
         altitude: "1200 - 1400 MDPL",
-        roasting: "Medium - Dark"
+        roasting: "Medium - Dark",
+        image: ProductThree
       },
       {
         nama: "ARABICA SINGLE ORIGIN 100GR",
@@ -53,7 +56,8 @@ export default function Products() {
         region: "Siborongborong",
         process: "Semi Wash",
         altitude: "1200 - 1400 MDPL",
-        roasting: "Medium - Dark"
+        roasting: "Medium - Dark",
+        image: ProductFour
       },
       {
         nama: "CUP TOGATO COFFEE 3 IN 1",
@@ -63,7 +67,8 @@ export default function Products() {
         region: "Siborongborong",
         process: "Semi Wash",
         altitude: "1200 - 1400 MDPL",
-        roasting: "Medium - Dark"
+        roasting: "Medium - Dark",
+        image: ProductFive
       },
     ]
 
@@ -82,7 +87,7 @@ export default function Products() {
             // style={{ backgroundColor: COLORS.main }}
           >
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-              <a href="https://flowbite.com/" class="flex items-center">
+              <a href="" class="flex items-center">
                 <img src={togatoLogo} class="h-8 mr-3" alt="Flowbite Logo" />
                 <span 
                   class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
@@ -104,7 +109,7 @@ export default function Products() {
                   <li>
                     <a 
                       href="/" 
-                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
+                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
                       aria-current="page"
                     >
                       Home
@@ -113,7 +118,7 @@ export default function Products() {
                   <li>
                     <a 
                       href="/about" 
-                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
+                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
                       aria-current="page"
                     >
                       About
@@ -122,7 +127,7 @@ export default function Products() {
                   <li>
                     <a 
                       href="/products" 
-                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
+                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
                       aria-current="page"
                     >
                       Products
@@ -131,7 +136,7 @@ export default function Products() {
                   <li>
                     <a 
                       href="/contacts" 
-                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
+                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
                       aria-current="page"
                     >
                       Contacts
@@ -169,7 +174,49 @@ export default function Products() {
               </div>
             </div>
           </div>
-          <div 
+          {products.map((product) => (
+            <div 
+              class="flex items-center justify-center h-screen mx-56"
+              style={{
+
+              }}
+            >
+              <div class="flex flex-col w-1/2">
+                <p class="text-center text-2xl font-bold">{product.nama}</p>
+                <table class="mt-12 mb-4">
+                  <tr>
+                    <td class="w-24">Asal</td>
+                    <td class="w-4">:</td>
+                    <td>{product.region}</td>
+                  </tr>
+                  <tr>
+                    <td class="w-24">Proses</td>
+                    <td class="w-4">:</td>
+                    <td>{product.process}</td>
+                  </tr>
+                  <tr>
+                    <td class="w-24">Ketinggian</td>
+                    <td class="w-4">:</td>
+                    <td>{product.altitude}</td>
+                  </tr>
+                  <tr>
+                    <td class="w-24">Roasting</td>
+                    <td class="w-4">:</td>
+                    <td>{product.roasting}</td>
+                  </tr>
+                </table>
+                <p class="text-justify">
+                  {product.deskripsi}
+                </p>
+              </div>
+              <div class="flex flex-col ml-28 items-center">
+                <img src={product.image} style={{ width: "450px" }} class="object-fill mb-4" />
+                <p>Berat {product.berat}</p>
+                <p>Harga : {product.harga}</p>
+              </div>
+            </div>
+          ))}
+          {/* <div 
             class="flex items-center justify-center h-screen mx-56"
             style={{
 
@@ -248,7 +295,7 @@ export default function Products() {
               <p>Berat 200 gr</p>
               <p>Harga : 16000 IDR</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </>
     );

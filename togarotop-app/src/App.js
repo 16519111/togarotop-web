@@ -15,6 +15,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import Contacts from './pages/contacts';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,13 @@ const router = createBrowserRouter([
     element: 
       <>
         <Products/>
+      </>,
+  },
+  {
+    path: "/contacts",
+    element: 
+      <>
+        <Contacts/>
       </>,
   },
   {

@@ -27,7 +27,7 @@ export default function About() {
             // style={{ backgroundColor: COLORS.main }}
           >
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-              <a href="https://flowbite.com/" class="flex items-center">
+              <a href="" class="flex items-center">
                 <img src={togatoLogo} class="h-8 mr-3" alt="Flowbite Logo" />
                 <span 
                   class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
@@ -49,7 +49,7 @@ export default function About() {
                   <li>
                     <a 
                       href="/" 
-                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
+                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
                       aria-current="page"
                     >
                       Home
@@ -58,7 +58,7 @@ export default function About() {
                   <li>
                     <a 
                       href="/about" 
-                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
+                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
                       aria-current="page"
                     >
                       About
@@ -67,7 +67,7 @@ export default function About() {
                   <li>
                     <a 
                       href="/products" 
-                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
+                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
                       aria-current="page"
                     >
                       Products
@@ -76,7 +76,7 @@ export default function About() {
                   <li>
                     <a 
                       href="/contacts" 
-                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
+                      class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
                       aria-current="page"
                     >
                       Contacts
