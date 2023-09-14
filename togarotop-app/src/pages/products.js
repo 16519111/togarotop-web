@@ -17,7 +17,7 @@ export default function Products() {
     const products = [
       {
         nama: "DRIP TOGATO COFFEE",
-        berat: "212 gr",
+        berat: "95 gr",
         harga: "55000 IDR",
         deskripsi: "Kopi Arabika Drip Togato adalah kopi arabika yang dipanen dan diproses secara sistem semi wash sehingga menghasilkan biji kopi arabika terbaik yang kemudian di roasting dengan profil medium-dark roast. Dikemas dalam sachet drip yang memudahkan anda membawa kopi saat bepergian ataupun bekerja. Terdiri atas 5 sachet drip coffee yang dikemas dengan drip paper filter.",
         region: "Siborongborong",
@@ -62,7 +62,7 @@ export default function Products() {
       {
         nama: "CUP TOGATO COFFEE 3 IN 1",
         berat: "33 gr",
-        harga: "59000 IDR",
+        harga: "17000 IDR",
         deskripsi: "3 in 1 mempermudah konsumen dalam penyajian kopi sesuai selera, dibawa kemana saja dan sangat praktis. Dikemas dalam drip paper filter dan dimasukkan dalam sachet aluminium foil. Sehingga mendapatkan kopi tanpa ampas dengan aromma dan citarasa yang khas serta kadar keasaman yang rendah.",
         region: "Siborongborong",
         process: "Semi Wash",
