@@ -109,7 +109,7 @@ export default function Dashboard() {
                 class="text-center text-2xl font-bold"
                 style={{ color: COLORS.main }}
               >
-                KOPI SIBORONGBORONG<br/>SUMATERA UTARA<br/>SINCE 2019
+                SIBORONGBORONG COFFEE<br/>NORTH SUMATERA<br/>SINCE 2019
               </p>
             </div>
             <img 

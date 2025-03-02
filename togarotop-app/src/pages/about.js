@@ -9,6 +9,10 @@ import backgroundAbout from "../assets/new/about-background.jpeg";
 import geografisImage from "../assets/new/geografis.jpeg";
 import kualitasImage from "../assets/new/kualitas.jpeg";
 import variatifImage from "../assets/new/variatif.jpeg";
+import halalImage from "../assets/halal.png";
+import bpomImage from "../assets/bpom.png";
+import hakiImage from "../assets/haki.png";
+
 
 export default function About() {
 
@@ -104,16 +108,16 @@ export default function About() {
               color: "white"
             }}
           >
-            <p class="text-3xl mb-14">TENTANG KAMI</p>
+            <p class="text-3xl mb-14">ABOUT US</p>
             <p class="mx-56 text-justify text-xl">
-              Togato Coffee diolah dari kopi yang berasal dari Siborongborong
-              dengan ketinggian 1200-1300 mdpl. Proses pasca panen untuk
-              menghilangkan kulit buah dengan sistem semi wash. Kemudian
-              kopi diolah dengan menggunakan alat tradisional seperti alu dan
-              lumpang untuk mengelupas kulit tanduk serta mesin sederhana
-              yang terbuat dari tanah liat untuk roasting. Tingkat roasting
-              adalah medium_dark dan hasilnya kopi yang memiliki aroma
-              khas dengan tingkat keasaman yang rendah.
+              Togato Coffee is processed from coffee originating from Siborongborong
+              with an altitude of 1200-1300 meters above sea level. The post-harvest process to
+              remove the fruit skin with a semi-wash system. Then
+              the coffee is processed using traditional tools such as pestles and
+              mortars to peel off the horny skin and simple machines
+              made of clay for roasting. The roasting level
+              is medium dark and the result is coffee that has a distinctive aroma
+              with a low acidity level.
             </p>
           </div>
           <div 
@@ -122,18 +126,17 @@ export default function About() {
 
             }}
           >
-            <p class="text-3xl mb-20 font-black">VISI MISI TOGATO COFFEE</p>
-            <p class="font-bold text-xl font-black">Visi</p>
+            <p class="text-3xl mb-20 font-black">VISION AND MISSION OF TOGATO COFFEE</p>
+            <p class="font-bold text-xl font-black">Vision</p>
             <p class="mx-56 text-justify text-xl">
-              Menciptakan kopi yang berkualitas kepada masyarakat Indonesia,
-              khusus nya yang kopinya berasal dari wilayah Siborongborong
-              kab. Tapanuli Utara dan kawasan Danau Toba.
+              Creating quality coffee for the people of Indonesia, especially those whose coffee comes 
+              from the Siborongborong area, North Tapanuli Regency and the Lake Toba area.
             </p>
-            <p class="font-black mt-10 text-xl">Misi</p>
+            <p class="font-black mt-10 text-xl">Mision</p>
             <p class="mx-56 text-justify text-xl">
-              Meningkatkan nilai tambah kopi, dengan pengolahan yang prima
-              mulai dari biji kopi yang digunakan, proses pengolahan biji kopi
-              menjadi bahan siap pakai, hingga hasil akhir pengolahan biji kopi.
+              Increasing the added value of coffee, with excellent processing
+              starting from the coffee beans used, the coffee bean processing process
+              into ready-to-use materials, to the final results of coffee bean processing.
             </p>
           </div>
           <div 
@@ -142,23 +145,23 @@ export default function About() {
 
             }}
           >
-            <p class="text-3xl mb-14 text-center font-black">KEUNGGULAN<br/> TOGATO COFFEE</p>
+            <p class="text-3xl mb-14 text-center font-black">THE EXCELLENCE OF<br/> TOGATO COFFEE</p>
             <div class="flex">
-              <div>
+              {/* <div>
                 <img src={geografisImage} class="h-72"/>
-                <p class="font-bold text-center text-xl">GEOGRAFIS</p>
+                <p class="font-bold text-center text-xl">DIVER</p>
+              </div> */}
+              <div>
+                <img src={kualitasImage} class="h-72 mx-20"/>
+                <p class="font-bold text-center text-xl">QUALITY</p>
               </div>
               <div>
-                <img src={kualitasImage} class="h-72 mx-12"/>
-                <p class="font-bold text-center text-xl">KUALITAS</p>
-              </div>
-              <div>
-                <img src={variatifImage} class="h-72"/>
-                <p class="font-bold text-center text-xl">PRODUK VARIATIF</p>
+                <img src={variatifImage} class="h-72 mx-20"/>
+                <p class="font-bold text-center text-xl">VARIETY OF PRODUCT</p>
               </div>
             </div>
           </div>
-          <div 
+          {/* <div 
             class="flex items-center flex-col justify-center h-screen"
             style={{
 
@@ -173,19 +176,18 @@ export default function About() {
               Dark). Untuk kopi bubuk dengan skala gilingan kopi (grind size) mulai dari
               (Fine, Medium-Fine, Medium, Medium-Coarse, dan Coarse)
             </p>
-          </div>
+          </div> */}
           <div 
             class="flex items-center flex-col justify-center h-screen"
             style={{
 
             }}
           >
-            <p class="text-3xl mb-10 text-center font-bold">KUALITAS</p>
+            <p class="text-3xl mb-10 text-center font-bold">QUALITY</p>
             <img src={kualitasImage} class="h-96"/>
             <p class="mx-56 text-justify text-xl">
-              Togato Coffee merupakan biji kopi pilihan (single origin), dipetik pada tingkat
-              kematangan cukup (petik merah), penjemuran terkontrol, dan pengolahan
-              biji kopi dengan mesin terstandarisasi.
+              Togato Coffee is a selected coffee bean (single origin), picked at a sufficient level of ripeness (red picking), 
+              controlled drying, and processing of coffee beans with standardized machines.
             </p>
           </div>
           <div 
@@ -194,15 +196,36 @@ export default function About() {
 
             }}
           >
-            <p class="text-3xl mb-10 text-center font-bold">PRODUK VARIATIF</p>
+            <p class="text-3xl mb-10 text-center font-bold">VARIETY OF PRODUCT</p>
             <img src={variatifImage} class="h-96"/>
             <p class="mx-56 text-justify text-xl">
-              Togato Coffee memiliki banyak variasi produk. Bentuk produk berdasarkan
-              pengolahan biji (termasuk Natural, Semi Wash, Full Wash, Wine, Luwak, Honey,
-              dan Peaberry) dan level roasting (Medium, Medium to Dark, Dark, dan Full
-              Dark). Untuk kopi bubuk dengan skala gilingan kopi (grind size) mulai dari
-              (Fine, Medium-Fine, Medium, Medium-Coarse, dan Coarse)
+              Togato Coffee has many product variations. Product forms are based on bean processing (including Natural, 
+              Semi Wash, Full Wash, Wine, Luwak, Honey, and Peaberry) and roasting levels (Medium, Medium to Dark, Dark, 
+              and Full Dark). For ground coffee with a coffee grinding scale (grind size) starting from (Fine, Medium-Fine, 
+              Medium, Medium-Coarse, and Coarse)
             </p>
+          </div>
+          <div 
+            class="flex items-center flex-col justify-center h-screen"
+            style={{
+
+            }}
+          >
+            <p class="text-3xl mb-14 text-center font-black">OUR CERTIFICATIONS</p>
+            <div class="flex">
+              <div>
+                <img src={halalImage} class="h-72"/>
+                {/* <p class="font-bold text-center text-xl">HALAL</p> */}
+              </div>
+              <div>
+                <img src={bpomImage} class="h-72 mx-20"/>
+                {/* <p class="font-bold text-center text-xl">BPOM MD</p> */}
+              </div>
+              <div>
+                <img src={hakiImage} class="h-72"/>
+                {/* <p class="font-bold text-center text-xl">HAKI MEREK</p> */}
+              </div>
+            </div>
           </div>
         </div>
       </>

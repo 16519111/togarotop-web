@@ -18,55 +18,55 @@ export default function Products() {
       {
         nama: "DRIP TOGATO COFFEE",
         berat: "95 gr",
-        harga: "55000 IDR",
-        deskripsi: "Kopi Arabika Drip Togato adalah kopi arabika yang dipanen dan diproses secara sistem semi wash sehingga menghasilkan biji kopi arabika terbaik yang kemudian di roasting dengan profil medium-dark roast. Dikemas dalam sachet drip yang memudahkan anda membawa kopi saat bepergian ataupun bekerja. Terdiri atas 5 sachet drip coffee yang dikemas dengan drip paper filter.",
+        harga: "$3.7 USD",
+        deskripsi: "Togato Drip Arabica Coffee is Arabica coffee that is harvested and processed using a semi-wash system to produce the best Arabica coffee beans which are then roasted with a medium-dark roast profile. Packed in a drip sachet that makes it easy for you to bring coffee when traveling or working. Consists of 5 drip coffee sachets packed with drip paper filters.",
         region: "Siborongborong",
         process: "Semi Wash",
-        altitude: "1200 - 1400 MDPL",
+        altitude: "1200 - 1400 meters above sea level",
         roasting: "Medium - Dark",
         image: ProductOne
       },
       {
         nama: "ROBUSTA GROUND COFFEE",
         berat: "200 gr",
-        harga: "16000 IDR",
-        deskripsi: "Kopi Robusta Togato adalah kopi robusta yang dipanen dan diproses secara sistem semi wash sehingga menghasilkan biji kopi robusta terbaik yang kemudian di roasting dengan profil medium-dark roast. ",
+        harga: "$1.2 USD",
+        deskripsi: "Togato Robusta Coffee is robusta coffee that is harvested and processed using a semi-wash system to produce the best robusta coffee beans which are then roasted with a medium-dark roast profile.",
         region: "Siborongborong",
         process: "Semi Wash",
-        altitude: "1200 - 1400 MDPL",
+        altitude: "1200 - 1400 meters above sea level",
         roasting: "Medium - Dark",
         image: ProductTwo
       },
       {
         nama: "ARABICA SINGLE ORIGIN 200GR",
         berat: "200 gr",
-        harga: "59000 IDR",
-        deskripsi: "Kopi Arabika Togato Coffee adalah kopi arabika yang dipanen dan diproses secara sistem semi wash sehingga menghasilkan biji kopi arabika terbaik yang kemudian di roasting dengan profil medium-dark roast (cocok untuk manual brew/filter dan espresso/mesin). Memiliki aroma dan cita rasa khas serta kadar asam rendah.",
+        harga: "$4 USD",
+        deskripsi: "Togato Coffee Arabica Coffee is Arabica coffee that is harvested and processed using a semi-wash system to produce the best Arabica coffee beans which are then roasted with a medium-dark roast profile (suitable for manual brew/filter and espresso/machine). Has a distinctive aroma and taste and low acidity.",
         region: "Siborongborong",
         process: "Semi Wash",
-        altitude: "1200 - 1400 MDPL",
+        altitude: "1200 - 1400 meters above sea level",
         roasting: "Medium - Dark",
         image: ProductThree
       },
       {
         nama: "ARABICA SINGLE ORIGIN 100GR",
         berat: "100 gr",
-        harga: "30000 IDR",
-        deskripsi: "Kopi Arabika Togato Coffee adalah kopi arabika yang dipanen dan diproses secara sistem semi wash sehingga menghasilkan biji kopi arabika terbaik yang kemudian di roasting dengan profil medium-dark roast (cocok untuk manual brew/filter dan espresso/mesin).",
+        harga: "$2 USD",
+        deskripsi: "Togato Coffee Arabica Coffee is Arabica coffee that is harvested and processed using a semi-wash system to produce the best Arabica coffee beans which are then roasted with a medium-dark roast profile (suitable for manual brew/filter and espresso/machine).",
         region: "Siborongborong",
         process: "Semi Wash",
-        altitude: "1200 - 1400 MDPL",
+        altitude: "1200 - 1400 meters above sea level",
         roasting: "Medium - Dark",
         image: ProductFour
       },
       {
         nama: "CUP TOGATO COFFEE 3 IN 1",
         berat: "33 gr",
-        harga: "17000 IDR",
-        deskripsi: "3 in 1 mempermudah konsumen dalam penyajian kopi sesuai selera, dibawa kemana saja dan sangat praktis. Dikemas dalam drip paper filter dan dimasukkan dalam sachet aluminium foil. Sehingga mendapatkan kopi tanpa ampas dengan aromma dan citarasa yang khas serta kadar keasaman yang rendah.",
+        harga: "$1.2 USD",
+        deskripsi: "3 in 1 makes it easier for consumers to serve coffee according to taste, take it anywhere and is very practical. Packed in drip paper filters and put in aluminum foil sachets. So you get coffee without grounds with a distinctive aroma and taste and low acidity.",
         region: "Siborongborong",
         process: "Semi Wash",
-        altitude: "1200 - 1400 MDPL",
+        altitude: "1200 - 1400 meters above sea level",
         roasting: "Medium - Dark",
         image: ProductFive
       },
@@ -161,7 +161,7 @@ export default function Products() {
               height: "calc(100vh - 64px)",
             }}
           >
-            <p class="text-3xl mb-20 text-center font-black">PRODUK TOGATO COFFEE</p>
+            <p class="text-3xl mb-20 text-center font-black">OUR PRODUCTS</p>
             <div class="flex">
               <div>
                 <img src={ShowcaseOne} class="h-72 w-72 object-cover"/>
@@ -185,17 +185,17 @@ export default function Products() {
                 <p class="text-center text-2xl font-bold">{product.nama}</p>
                 <table class="mt-12 mb-4">
                   <tr>
-                    <td class="w-24">Asal</td>
+                    <td class="w-24">Origin</td>
                     <td class="w-4">:</td>
                     <td>{product.region}</td>
                   </tr>
                   <tr>
-                    <td class="w-24">Proses</td>
+                    <td class="w-24">Process</td>
                     <td class="w-4">:</td>
                     <td>{product.process}</td>
                   </tr>
                   <tr>
-                    <td class="w-24">Ketinggian</td>
+                    <td class="w-24">Altitude</td>
                     <td class="w-4">:</td>
                     <td>{product.altitude}</td>
                   </tr>
@@ -211,8 +211,8 @@ export default function Products() {
               </div>
               <div class="flex flex-col ml-28 items-center">
                 <img src={product.image} style={{ width: "450px" }} class="object-fill mb-4" />
-                <p>Berat {product.berat}</p>
-                <p>Harga : {product.harga}</p>
+                <p>Weight {product.berat}</p>
+                <p>Price : {product.harga}</p>
               </div>
             </div>
           ))}
@@ -238,7 +238,7 @@ export default function Products() {
                 <tr>
                   <td class="w-24">Ketinggian</td>
                   <td class="w-4">:</td>
-                  <td>1200 - 1400 MDPL</td>
+                  <td>1200 - 1400 meters above sea level</td>
                 </tr>
                 <tr>
                   <td class="w-24">Roasting</td>
@@ -278,7 +278,7 @@ export default function Products() {
                 <tr>
                   <td class="w-24">Ketinggian</td>
                   <td class="w-4">:</td>
-                  <td>1200 - 1400 MDPL</td>
+                  <td>1200 - 1400 meters above sea level</td>
                 </tr>
                 <tr>
                   <td class="w-24">Roasting</td>

@@ -90,13 +90,20 @@ export default function Contacts() {
             </div>
           </nav>
           <div class="flex justify-center mt-24">
-            <div style={{ backgroundImage: `url(${ContactsImage})`, width: "900px", height: "460px", backgroundSize: "cover" }} class="p-4 text-center flex">
-              <div style={{ width: "450px" }}></div>
-              <div style={{ width: "450px" }} class="items-center flex flex-col justify-center text-lg">
-                <p class="my-3 font-bold" style={{ color: COLORS.darkMain }}>CONTACT PERSON</p>
-                <p class="my-3 bg-white p-5">ALFIN BONA SIMANJUNTAK<br/>082318101540</p>
-                <p class="my-3 font-bold" style={{ color: COLORS.darkMain }}>EMAIL</p>
-                <p class="my-3 bg-white p-5">togatocemerlang23@gmail.com</p>
+            <div style={{ backgroundImage: `url(${ContactsImage})`, width: "1200px", height: "613px", backgroundSize: "cover" }} class="p-4 text-center flex">
+              <div style={{ width: "600px" }}></div>
+              <div style={{ width: "600px" }} class="items-center flex flex-col justify-center text-lg">
+                <p class="my-0.5 font-bold" style={{ color: COLORS.darkMain }}>CONTACT PERSON</p>
+                <p class="my-0.5 bg-white p-5">RAULAN TOGATOROP (+62-82169188778)</p>
+                <div class="my-4"></div>
+                <p class="my-0.5 font-bold" style={{ color: COLORS.darkMain }}>EMAIL</p>
+                <p class="my-0.5 bg-white p-5">togatocemerlang23@gmail.com</p>
+                <div class="my-4"></div>
+                <p class="my-0.5 font-bold" style={{ color: COLORS.darkMain }}>INSTAGRAM</p>
+                <p class="my-0.5 bg-white p-5">Togato Coffee</p>
+                <div class="my-4"></div>
+                <p class="my-0.5 font-bold" style={{ color: COLORS.darkMain }}>FACEBOOK</p>
+                <p class="my-0.5 bg-white p-5">togatocoffee</p>
               </div>
             </div>
           </div>
