@@ -12,13 +12,18 @@ import ProductTwo from "../assets/new/product-2.jpeg";
 import ProductThree from "../assets/new/product-3.jpeg";
 import ProductFour from "../assets/new/product-4.jpeg";
 import ProductFive from "../assets/new/product-5.jpeg";
+import ProductSix from "../assets/new/product-6.jpeg";
+import ProductSeven from "../assets/new/product-7.jpeg";
+import ProductEight from "../assets/new/product-8.jpeg";
+import ProductNine from "../assets/new/product-9.jpeg";
+
 
 export default function Products() {
     const products = [
       {
         nama: "DRIP TOGATO COFFEE",
-        berat: "95 gr",
-        harga: "$3.7 USD",
+        berat: "60 gr",
+        harga: "$3.88 USD",
         deskripsi: "Togato Drip Arabica Coffee is Arabica coffee that is harvested and processed using a semi-wash system to produce the best Arabica coffee beans which are then roasted with a medium-dark roast profile. Packed in a drip sachet that makes it easy for you to bring coffee when traveling or working. Consists of 5 drip coffee sachets packed with drip paper filters.",
         region: "Siborongborong",
         process: "Semi Wash",
@@ -29,7 +34,7 @@ export default function Products() {
       {
         nama: "ROBUSTA GROUND COFFEE",
         berat: "200 gr",
-        harga: "$1.2 USD",
+        harga: "$2.33 USD",
         deskripsi: "Togato Robusta Coffee is robusta coffee that is harvested and processed using a semi-wash system to produce the best robusta coffee beans which are then roasted with a medium-dark roast profile.",
         region: "Siborongborong",
         process: "Semi Wash",
@@ -40,7 +45,7 @@ export default function Products() {
       {
         nama: "ARABICA SINGLE ORIGIN 200GR",
         berat: "200 gr",
-        harga: "$4 USD",
+        harga: "$3.82 USD",
         deskripsi: "Togato Coffee Arabica Coffee is Arabica coffee that is harvested and processed using a semi-wash system to produce the best Arabica coffee beans which are then roasted with a medium-dark roast profile (suitable for manual brew/filter and espresso/machine). Has a distinctive aroma and taste and low acidity.",
         region: "Siborongborong",
         process: "Semi Wash",
@@ -51,7 +56,7 @@ export default function Products() {
       {
         nama: "ARABICA SINGLE ORIGIN 100GR",
         berat: "100 gr",
-        harga: "$2 USD",
+        harga: "$1.94 USD",
         deskripsi: "Togato Coffee Arabica Coffee is Arabica coffee that is harvested and processed using a semi-wash system to produce the best Arabica coffee beans which are then roasted with a medium-dark roast profile (suitable for manual brew/filter and espresso/machine).",
         region: "Siborongborong",
         process: "Semi Wash",
@@ -62,13 +67,24 @@ export default function Products() {
       {
         nama: "CUP TOGATO COFFEE 3 IN 1",
         berat: "33 gr",
-        harga: "$1.2 USD",
+        harga: "$1.1 USD",
         deskripsi: "3 in 1 makes it easier for consumers to serve coffee according to taste, take it anywhere and is very practical. Packed in drip paper filters and put in aluminum foil sachets. So you get coffee without grounds with a distinctive aroma and taste and low acidity.",
         region: "Siborongborong",
         process: "Semi Wash",
         altitude: "1200 - 1400 meters above sea level",
         roasting: "Medium - Dark",
         image: ProductFive
+      },
+      {
+        nama: "Green Bean Arabica grade 1",
+        berat: "1 kg",
+        harga: "$9 USD",
+        deskripsi: "Original, semi-washed, contains 12-13% water, and 5-7% residues.",
+        region: "Lintong-Siborongborong",
+        process: "Semi Wash",
+        altitude: "1200 - 1400 meters above sea level",
+        roasting: "Not Roasted",
+        image: ProductSix
       },
     ]
 
@@ -164,13 +180,30 @@ export default function Products() {
             <p class="text-3xl mb-20 text-center font-black">OUR PRODUCTS</p>
             <div class="flex">
               <div>
-                <img src={ShowcaseOne} class="h-72 w-72 object-cover"/>
+                <img src={ShowcaseOne} class="h-64 w-64 object-cover"/>
               </div>
               <div>
-                <img src={ProductOne} class="h-72 w-72 mx-14 object-cover"/>
+                <img src={ProductOne} class="h-64 w-64 object-cover"/>
               </div>
               <div>
-                <img src={ProductThree} class="h-72 w-72 object-cover"/>
+                <img src={ProductThree} class="h-64 w-64 object-cover"/>
+              </div>
+              <div>
+                <img src={ProductSix} class="h-64 w-64 object-cover"/>
+              </div>
+            </div>
+            <div class="flex">
+              <div>
+                <img src={ProductSeven} class="h-64 w-64 object-cover"/>
+              </div>
+              <div>
+                <img src={ProductEight} class="h-64 w-64 object-cover"/>
+              </div>
+              <div>
+                <img src={ProductNine} class="h-64 w-64 object-cover"/>
+              </div>
+              <div>
+                <img src={ProductFour} class="h-64 w-64 object-cover"/>
               </div>
             </div>
           </div>
