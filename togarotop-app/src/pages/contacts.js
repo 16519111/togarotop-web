@@ -5,7 +5,8 @@ import togatoLogo from "../assets/togato-logo.png";
 import ContactsImage from "../assets/new/contacts.png";
 
 export default function Contacts() {
-
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  let w = window.innerWidth;
     return (
       <>
         <div 
@@ -24,18 +25,18 @@ export default function Contacts() {
               <a href="" class="flex items-center">
                 <img src={togatoLogo} class="h-8 mr-3" alt="Flowbite Logo" />
                 <span 
-                  class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+                  class="self-center text-lg font-semibold whitespace-nowrap dark:text-white"
                   style={{ color: COLORS.main }}
                 >
                   Togato Coffee
                 </span>
               </a>
-              <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+              <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false" onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
               </button>
               <div 
-                class="hidden w-full md:block md:w-auto" 
+                class={`${!isNavbarOpen && "hidden"} w-full md:block md:w-auto`}
                 id="navbar-default"
                 style={{ color: COLORS.main }}
               >
@@ -89,6 +90,30 @@ export default function Contacts() {
               </div>
             </div>
           </nav>
+
+          {w <= 450 ?
+          <div class="mt-24">
+            <div style={{ }} class="flex flex-col items-center">
+              <p class="my-0.5 font-bold" style={{ color: COLORS.darkMain }}>CONTACT PERSON</p>
+              <p class="my-0.5 p-5">RAULAN TOGATOROP <br/>(+62-82169188778)</p>
+            </div>
+            <hr className="my-8 border-2"></hr>
+            <div style={{ }} class="flex flex-col items-center">
+              <p class="my-0.5 font-bold" style={{ color: COLORS.darkMain }}>EMAIL</p>
+              <p class="my-0.5 p-5">togatocemerlang23@gmail.com</p>
+            </div>
+            <hr className="my-8 border-2"></hr>
+            <div style={{ }} class="flex flex-col items-center">
+              <p class="my-0.5 font-bold" style={{ color: COLORS.darkMain }}>INSTAGRAM</p>
+              <p class="my-0.5 p-5">Togato Coffee</p>
+            </div>
+            <hr className="my-8 border-2"></hr>
+            <div style={{ }} class="flex flex-col items-center">
+              <p class="my-0.5 font-bold" style={{ color: COLORS.darkMain }}>FACEBOOK</p>
+              <p class="my-0.5 p-5">togatocoffee</p>
+            </div>
+          </div>
+        :
           <div class="flex justify-center mt-24">
             <div style={{ backgroundImage: `url(${ContactsImage})`, width: "1200px", height: "613px", backgroundSize: "cover" }} class="p-4 text-center flex">
               <div style={{ width: "600px" }}></div>
@@ -107,6 +132,7 @@ export default function Contacts() {
               </div>
             </div>
           </div>
+        }
         </div>
       </>
     );

@@ -11,7 +11,8 @@ import logoWhite from "../assets/new/Logo_White.jpg";
 import dashboardTwo from "../assets/new/dashboard-2.jpeg";
 
 export default function Dashboard() {
-
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+    let w = window.innerWidth;
     return (
       <>
         <div 
@@ -22,25 +23,89 @@ export default function Dashboard() {
             
           }}
         >
-          <nav 
-            class="border-gray-200 max-w-screen-xl flex items-center justify-between" 
-            style={{ color: "white" }}
-          >
 
-              {/* <a href="" class="flex items-center">
-                <img src={togatoLogo} class="h-8 mr-3" alt="Flowbite Logo" />
-                <span 
-                  class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-                  style={{ color: "white" }}
-                >
-                  Togato Coffee
-                </span>
-              </a>
-              <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-              </button> */}
-
+          {w <= 450 ?
+            <>
+              <nav 
+                class="border-gray-200" 
+                // style={{ backgroundColor: COLORS.main }}
+              >
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                  <a href="" class="flex items-center">
+                    <img src={togatoLogo} class="h-8 mr-3" alt="Flowbite Logo" />
+                    <span 
+                      class="self-center text-lg font-semibold whitespace-nowrap dark:text-white"
+                      style={{ color: COLORS.main }}
+                    >
+                      Togato Coffee
+                    </span>
+                  </a>
+                  <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false" onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                  </button>
+                  <div 
+                    class={`${!isNavbarOpen && "hidden"} w-full md:block md:w-auto`}
+                    id="navbar-default"
+                    style={{ color: COLORS.main }}
+                  >
+                    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-12 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                      <li>
+                        <a 
+                          href="/" 
+                          class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
+                          aria-current="page"
+                        >
+                          Home
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          href="/about" 
+                          class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
+                          aria-current="page"
+                        >
+                          About
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          href="/products" 
+                          class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
+                          aria-current="page"
+                        >
+                          Products
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          href="/contacts" 
+                          class="block font-semibold py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
+                          aria-current="page"
+                        >
+                          Contacts
+                        </a>
+                      </li>
+                      {/* <li>
+                        <a 
+                          href="/login" 
+                          class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" 
+                          aria-current="page"
+                        >
+                          Contacts
+                        </a>
+                      </li> */}
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </>
+          :
+            <>
+              <nav 
+                class="border-gray-200 max-w-screen-xl flex items-center justify-between" 
+                style={{ color: "white" }}
+              >
                 <div style={{ backgroundColor: "#0c0a0b", minWidth: "35vw", maxWidth: "35vw" }} class="p-4 flex justify-center">
                   <ul class="font-medium flex flex-row mt-0 rounded-lg space-x-12">
                     <li>
@@ -86,106 +151,192 @@ export default function Dashboard() {
                     </li>
                   </ul>
                 </div>
-
-          </nav>
-          <div 
-            class="flex items-center"
-            style={{
-              height: "calc(100vh - 64px)",
-            }}
-          >
-            <img 
-              src={heroImage}
+              </nav>
+            </>
+          }
+          {w <= 450 ? 
+            <div 
+              class="flex items-center"
               style={{
                 height: "calc(100vh - 64px)",
-                minWidth: "35vw",
-                maxWidth: "35vw",
-                width: "35vw"
               }}
-            />
-            <div style={{ minWidth: "30vw", maxWidth: "30vw", width: "30vw" }}>
-              <img src={logoWhite} />
-              <p 
-                class="text-center text-2xl font-bold"
-                style={{ color: COLORS.main }}
-              >
-                SIBORONGBORONG COFFEE<br/>NORTH SUMATERA<br/>SINCE 2019
-              </p>
-            </div>
-            <img 
-              src={heroImage} 
-              style={{
-                height: "calc(100vh - 64px)",
-                minWidth: "35vw",
-                maxWidth: "35vw",
-                width: "35vw"
-              }}
-            />
-            {/* <div class="mt-48 flex justify-between">
-              <div 
-                class="max-w-xl p-12 rounded-l-xl text-center justify-end"
-                style={{
-                  
-                }}
-              >
-                <hr 
-                  class="my-4 mx-48 rounded border-0"
-                  style={{
-                    border: 0,
-                    borderTop: `3px dotted ${COLORS.main}`
-                  }}
-                />
+            >
+              <div style={{ padding: "10px" }}>
+                <img src={logoWhite} />
                 <p 
-                  class="font-bold text-2xl"
+                  class="text-center text-2xl font-bold"
+                  style={{ color: COLORS.main }}
+                >
+                  SIBORONGBORONG COFFEE<br/>NORTH SUMATERA<br/>SINCE 2019
+                </p>
+              </div>
+              {/* <div class="mt-48 flex justify-between">
+                <div 
+                  class="max-w-xl p-12 rounded-l-xl text-center justify-end"
                   style={{
-                    color: COLORS.darkMain,
-                    lineHeight: "3rem"
+                    
                   }}
                 >
-                  Sumatera's<br /> <span class="font-black text-5xl" style={{ color: COLORS.main }}>SIBORONGBORONG</span><br /> <i class="text-4xl">Drip Coffee ~</i>
-                </p>
-                <hr 
-                  class="my-4 mx-48 rounded border-0"
+                  <hr 
+                    class="my-4 mx-48 rounded border-0"
+                    style={{
+                      border: 0,
+                      borderTop: `3px dotted ${COLORS.main}`
+                    }}
+                  />
+                  <p 
+                    class="font-bold text-2xl"
+                    style={{
+                      color: COLORS.darkMain,
+                      lineHeight: "3rem"
+                    }}
+                  >
+                    Sumatera's<br /> <span class="font-black text-5xl" style={{ color: COLORS.main }}>SIBORONGBORONG</span><br /> <i class="text-4xl">Drip Coffee ~</i>
+                  </p>
+                  <hr 
+                    class="my-4 mx-48 rounded border-0"
+                    style={{
+                      border: 0,
+                      borderTop: `3px dotted ${COLORS.main}`
+                    }}
+                  />
+                  <div class="mt-6 flex justify-center">
+                    <button 
+                      class="text-white text-lg font-bold py-2 px-4 rounded mr-1"
+                      style={{
+                        border: `1px solid ${COLORS.main}`,
+                        color: COLORS.main,
+                        "&:hover": {
+                          backgroundColor: COLORS.darkMain
+                        }
+                      }}
+                    >
+                      Selengkapnya
+                    </button>
+                    <button 
+                      class="text-white text-lg font-bold py-2 px-4 rounded ml-1 flex items-center"
+                      style={{
+                        backgroundColor: COLORS.main,
+                        "&:hover": {
+                          backgroundColor: COLORS.darkMain
+                        }
+                      }}
+                    >
+                      <FaWhatsapp />
+                      <p class="ml-1.5">0852-0659-6663</p>
+                    </button>
+                  </div>
+                  // 
+                </div>
+                <img src={allCoffee} 
                   style={{
-                    border: 0,
-                    borderTop: `3px dotted ${COLORS.main}`
+                    width: "600px"
+                  }} 
+                />
+              </div> */}
+            </div>
+          :
+            <>
+              <div 
+                class="flex items-center"
+                style={{
+                  height: "calc(100vh - 64px)",
+                }}
+              >
+                <img 
+                  src={heroImage}
+                  style={{
+                    height: "calc(100vh - 64px)",
+                    minWidth: "35vw",
+                    maxWidth: "35vw",
+                    width: "35vw"
                   }}
                 />
-                <div class="mt-6 flex justify-center">
-                  <button 
-                    class="text-white text-lg font-bold py-2 px-4 rounded mr-1"
-                    style={{
-                      border: `1px solid ${COLORS.main}`,
-                      color: COLORS.main,
-                      "&:hover": {
-                        backgroundColor: COLORS.darkMain
-                      }
-                    }}
+                <div style={{ minWidth: "30vw", maxWidth: "30vw", width: "30vw" }}>
+                  <img src={logoWhite} />
+                  <p 
+                    class="text-center text-2xl font-bold"
+                    style={{ color: COLORS.main }}
                   >
-                    Selengkapnya
-                  </button>
-                  <button 
-                    class="text-white text-lg font-bold py-2 px-4 rounded ml-1 flex items-center"
-                    style={{
-                      backgroundColor: COLORS.main,
-                      "&:hover": {
-                        backgroundColor: COLORS.darkMain
-                      }
-                    }}
-                  >
-                    <FaWhatsapp />
-                    <p class="ml-1.5">0852-0659-6663</p>
-                  </button>
+                    SIBORONGBORONG COFFEE<br/>NORTH SUMATERA<br/>SINCE 2019
+                  </p>
                 </div>
-                // 
+                <img 
+                  src={heroImage} 
+                  style={{
+                    height: "calc(100vh - 64px)",
+                    minWidth: "35vw",
+                    maxWidth: "35vw",
+                    width: "35vw"
+                  }}
+                />
+                {/* <div class="mt-48 flex justify-between">
+                  <div 
+                    class="max-w-xl p-12 rounded-l-xl text-center justify-end"
+                    style={{
+                      
+                    }}
+                  >
+                    <hr 
+                      class="my-4 mx-48 rounded border-0"
+                      style={{
+                        border: 0,
+                        borderTop: `3px dotted ${COLORS.main}`
+                      }}
+                    />
+                    <p 
+                      class="font-bold text-2xl"
+                      style={{
+                        color: COLORS.darkMain,
+                        lineHeight: "3rem"
+                      }}
+                    >
+                      Sumatera's<br /> <span class="font-black text-5xl" style={{ color: COLORS.main }}>SIBORONGBORONG</span><br /> <i class="text-4xl">Drip Coffee ~</i>
+                    </p>
+                    <hr 
+                      class="my-4 mx-48 rounded border-0"
+                      style={{
+                        border: 0,
+                        borderTop: `3px dotted ${COLORS.main}`
+                      }}
+                    />
+                    <div class="mt-6 flex justify-center">
+                      <button 
+                        class="text-white text-lg font-bold py-2 px-4 rounded mr-1"
+                        style={{
+                          border: `1px solid ${COLORS.main}`,
+                          color: COLORS.main,
+                          "&:hover": {
+                            backgroundColor: COLORS.darkMain
+                          }
+                        }}
+                      >
+                        Selengkapnya
+                      </button>
+                      <button 
+                        class="text-white text-lg font-bold py-2 px-4 rounded ml-1 flex items-center"
+                        style={{
+                          backgroundColor: COLORS.main,
+                          "&:hover": {
+                            backgroundColor: COLORS.darkMain
+                          }
+                        }}
+                      >
+                        <FaWhatsapp />
+                        <p class="ml-1.5">0852-0659-6663</p>
+                      </button>
+                    </div>
+                    // 
+                  </div>
+                  <img src={allCoffee} 
+                    style={{
+                      width: "600px"
+                    }} 
+                  />
+                </div> */}
               </div>
-              <img src={allCoffee} 
-                style={{
-                  width: "600px"
-                }} 
-              />
-            </div> */}
-          </div>
+            </>
+          }
         </div>
         {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path fill="#063c14" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>

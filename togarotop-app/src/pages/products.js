@@ -19,13 +19,16 @@ import ProductNine from "../assets/new/product-9.jpeg";
 
 
 export default function Products() {
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  let w = window.innerWidth;
+
     const products = [
       {
         nama: "DRIP TOGATO COFFEE",
         berat: "60 gr",
         harga: "$3.88 USD",
         deskripsi: "Togato Drip Arabica Coffee is Arabica coffee that is harvested and processed using a semi-wash system to produce the best Arabica coffee beans which are then roasted with a medium-dark roast profile. Packed in a drip sachet that makes it easy for you to bring coffee when traveling or working. Consists of 5 drip coffee sachets packed with drip paper filters.",
-        region: "Siborongborong",
+        region: "Lintong-Siborongborong",
         process: "Semi Wash",
         altitude: "1200 - 1400 meters above sea level",
         roasting: "Medium - Dark",
@@ -36,7 +39,7 @@ export default function Products() {
         berat: "200 gr",
         harga: "$2.33 USD",
         deskripsi: "Togato Robusta Coffee is robusta coffee that is harvested and processed using a semi-wash system to produce the best robusta coffee beans which are then roasted with a medium-dark roast profile.",
-        region: "Siborongborong",
+        region: "Lintong-Siborongborong",
         process: "Semi Wash",
         altitude: "1200 - 1400 meters above sea level",
         roasting: "Medium - Dark",
@@ -47,7 +50,7 @@ export default function Products() {
         berat: "200 gr",
         harga: "$3.82 USD",
         deskripsi: "Togato Coffee Arabica Coffee is Arabica coffee that is harvested and processed using a semi-wash system to produce the best Arabica coffee beans which are then roasted with a medium-dark roast profile (suitable for manual brew/filter and espresso/machine). Has a distinctive aroma and taste and low acidity.",
-        region: "Siborongborong",
+        region: "Lintong-Siborongborong",
         process: "Semi Wash",
         altitude: "1200 - 1400 meters above sea level",
         roasting: "Medium - Dark",
@@ -58,7 +61,7 @@ export default function Products() {
         berat: "100 gr",
         harga: "$1.94 USD",
         deskripsi: "Togato Coffee Arabica Coffee is Arabica coffee that is harvested and processed using a semi-wash system to produce the best Arabica coffee beans which are then roasted with a medium-dark roast profile (suitable for manual brew/filter and espresso/machine).",
-        region: "Siborongborong",
+        region: "Lintong-Siborongborong",
         process: "Semi Wash",
         altitude: "1200 - 1400 meters above sea level",
         roasting: "Medium - Dark",
@@ -69,7 +72,7 @@ export default function Products() {
         berat: "33 gr",
         harga: "$1.1 USD",
         deskripsi: "3 in 1 makes it easier for consumers to serve coffee according to taste, take it anywhere and is very practical. Packed in drip paper filters and put in aluminum foil sachets. So you get coffee without grounds with a distinctive aroma and taste and low acidity.",
-        region: "Siborongborong",
+        region: "Lintong-Siborongborong",
         process: "Semi Wash",
         altitude: "1200 - 1400 meters above sea level",
         roasting: "Medium - Dark",
@@ -106,18 +109,18 @@ export default function Products() {
               <a href="" class="flex items-center">
                 <img src={togatoLogo} class="h-8 mr-3" alt="Flowbite Logo" />
                 <span 
-                  class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+                  class="self-center text-lg font-semibold whitespace-nowrap dark:text-white"
                   style={{ color: COLORS.main }}
                 >
                   Togato Coffee
                 </span>
               </a>
-              <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+              <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false" onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
               </button>
               <div 
-                class="hidden w-full md:block md:w-auto" 
+                class={`${!isNavbarOpen && "hidden"} w-full md:block md:w-auto`}
                 id="navbar-default"
                 style={{ color: COLORS.main }}
               >
@@ -171,84 +174,178 @@ export default function Products() {
               </div>
             </div>
           </nav>
-          <div 
-            class="flex items-center flex-col justify-center"
-            style={{
-              height: "calc(100vh - 64px)",
-            }}
-          >
-            <p class="text-3xl mb-20 text-center font-black">OUR PRODUCTS</p>
-            <div class="flex">
-              <div>
-                <img src={ShowcaseOne} class="h-64 w-64 object-cover"/>
+          {w <= 450 ?
+            <>
+              <div className="h-10"></div>
+              <div 
+                class="flex items-center flex-col justify-center"
+                style={{
+                  // height: "calc(100vh - 64px)",
+                }}
+              >
+                <p class="text-2xl mb-8 text-center font-black">OUR PRODUCTS</p>
+                <div class="flex">
+                  <div>
+                    <img src={ShowcaseOne} class="h-32 w-32 object-cover"/>
+                  </div>
+                  <div>
+                    <img src={ProductOne} class="h-32 w-32 object-cover"/>
+                  </div>
+                  {/* <div>
+                    <img src={ProductThree} class="h-32 w-32 object-cover"/>
+                  </div>
+                  <div>
+                    <img src={ProductSix} class="h-32 w-32 object-cover"/>
+                  </div> */}
+                </div>
+                <div class="flex">
+                  {/* <div>
+                    <img src={ProductSeven} class="h-64 w-64 object-cover"/>
+                  </div>
+                  <div>
+                    <img src={ProductEight} class="h-64 w-64 object-cover"/>
+                  </div> */}
+                  <div>
+                    <img src={ProductNine} class="h-32 w-32 object-cover"/>
+                  </div>
+                  <div>
+                    <img src={ProductFour} class="h-32 w-32 object-cover"/>
+                  </div>
+                </div>
               </div>
-              <div>
-                <img src={ProductOne} class="h-64 w-64 object-cover"/>
+              <hr className="mt-16 border-2"></hr>
+              {products.map((product, index) => (
+                <>
+                  <div 
+                    class="items-center justify-center"
+                    style={{
+                      padding: "10px 30px"
+                    }}
+                  >
+                      <img src={product.image} style={{ width: "450px" }} class="object-fill mb-4" />
+                      <p class="text-center text-xl mb-6 font-bold">{product.nama}</p>
+                      <table class="mb-6 text-md font-light">
+                        <tr>
+                          <td class="w-6 align-top">Origin</td>
+                          <td class="w-3 text-center align-top">:</td>
+                          <td>{product.region}</td>
+                        </tr>
+                        <tr>
+                          <td class="w-6 align-top">Process</td>
+                          <td class="w-3 text-center align-top">:</td>
+                          <td>{product.process}</td>
+                        </tr>
+                        <tr>
+                          <td class="w-6 align-top">Altitude</td>
+                          <td class="w-3 text-center align-top">:</td>
+                          <td>{product.altitude}</td>
+                        </tr>
+                        <tr>
+                          <td class="w-6 align-top">Roasting</td>
+                          <td class="w-3 text-center align-top">:</td>
+                          <td>{product.roasting}</td>
+                        </tr>
+                      </table>
+                      <p class="text-justify text-sm">
+                        {product.deskripsi}
+                      </p>
+                    {/* <div class="flex flex-col ml-28 items-center">
+                      <img src={product.image} style={{ width: "450px" }} class="object-fill mb-4" />
+                      <p>Weight {product.berat}</p>
+                      <p>Price : {product.harga}</p>
+                    </div> */}
+                  
+                  </div>
+                  {index !== products.length - 1 ?
+                    <hr className="my-16 border-2"></hr>
+                  :
+                    <div className="h-16"></div>
+                  }
+                </>
+              ))}
+            </>
+          :
+            <>
+              <div 
+                class="flex items-center flex-col justify-center"
+                style={{
+                  height: "calc(100vh - 64px)",
+                }}
+              >
+                <p class="text-3xl mb-20 text-center font-black">OUR PRODUCTS</p>
+                <div class="flex">
+                  <div>
+                    <img src={ShowcaseOne} class="h-64 w-64 object-cover"/>
+                  </div>
+                  <div>
+                    <img src={ProductOne} class="h-64 w-64 object-cover"/>
+                  </div>
+                  <div>
+                    <img src={ProductThree} class="h-64 w-64 object-cover"/>
+                  </div>
+                  <div>
+                    <img src={ProductSix} class="h-64 w-64 object-cover"/>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div>
+                    <img src={ProductSeven} class="h-64 w-64 object-cover"/>
+                  </div>
+                  <div>
+                    <img src={ProductEight} class="h-64 w-64 object-cover"/>
+                  </div>
+                  <div>
+                    <img src={ProductNine} class="h-64 w-64 object-cover"/>
+                  </div>
+                  <div>
+                    <img src={ProductFour} class="h-64 w-64 object-cover"/>
+                  </div>
+                </div>
               </div>
-              <div>
-                <img src={ProductThree} class="h-64 w-64 object-cover"/>
-              </div>
-              <div>
-                <img src={ProductSix} class="h-64 w-64 object-cover"/>
-              </div>
-            </div>
-            <div class="flex">
-              <div>
-                <img src={ProductSeven} class="h-64 w-64 object-cover"/>
-              </div>
-              <div>
-                <img src={ProductEight} class="h-64 w-64 object-cover"/>
-              </div>
-              <div>
-                <img src={ProductNine} class="h-64 w-64 object-cover"/>
-              </div>
-              <div>
-                <img src={ProductFour} class="h-64 w-64 object-cover"/>
-              </div>
-            </div>
-          </div>
-          {products.map((product) => (
-            <div 
-              class="flex items-center justify-center h-screen mx-56"
-              style={{
+              {products.map((product) => (
+                <div 
+                  class="flex items-center justify-center mx-56"
+                  style={{
 
-              }}
-            >
-              <div class="flex flex-col w-1/2">
-                <p class="text-center text-2xl font-bold">{product.nama}</p>
-                <table class="mt-12 mb-4">
-                  <tr>
-                    <td class="w-24">Origin</td>
-                    <td class="w-4">:</td>
-                    <td>{product.region}</td>
-                  </tr>
-                  <tr>
-                    <td class="w-24">Process</td>
-                    <td class="w-4">:</td>
-                    <td>{product.process}</td>
-                  </tr>
-                  <tr>
-                    <td class="w-24">Altitude</td>
-                    <td class="w-4">:</td>
-                    <td>{product.altitude}</td>
-                  </tr>
-                  <tr>
-                    <td class="w-24">Roasting</td>
-                    <td class="w-4">:</td>
-                    <td>{product.roasting}</td>
-                  </tr>
-                </table>
-                <p class="text-justify">
-                  {product.deskripsi}
-                </p>
-              </div>
-              <div class="flex flex-col ml-28 items-center">
-                <img src={product.image} style={{ width: "450px" }} class="object-fill mb-4" />
-                <p>Weight {product.berat}</p>
-                <p>Price : {product.harga}</p>
-              </div>
-            </div>
-          ))}
+                  }}
+                >
+                  <div class="flex flex-col w-1/2">
+                    <p class="text-center text-2xl font-bold">{product.nama}</p>
+                    <table class="mt-12 mb-4">
+                      <tr>
+                        <td class="w-24">Origin</td>
+                        <td class="w-4">:</td>
+                        <td>{product.region}</td>
+                      </tr>
+                      <tr>
+                        <td class="w-24">Process</td>
+                        <td class="w-4">:</td>
+                        <td>{product.process}</td>
+                      </tr>
+                      <tr>
+                        <td class="w-24">Altitude</td>
+                        <td class="w-4">:</td>
+                        <td>{product.altitude}</td>
+                      </tr>
+                      <tr>
+                        <td class="w-24">Roasting</td>
+                        <td class="w-4">:</td>
+                        <td>{product.roasting}</td>
+                      </tr>
+                    </table>
+                    <p class="text-justify">
+                      {product.deskripsi}
+                    </p>
+                  </div>
+                  <div class="flex flex-col ml-28 items-center">
+                    <img src={product.image} style={{ width: "450px" }} class="object-fill mb-4" />
+                    <p>Weight {product.berat}</p>
+                    <p>Price : {product.harga}</p>
+                  </div>
+                </div>
+              ))}
+            </>
+          }
           {/* <div 
             class="flex items-center justify-center h-screen mx-56"
             style={{
